@@ -6,6 +6,12 @@
 * If the user does not check the `Remember me` box on the login page, their session will expire in 120 minutes (2 hours).
 * If the user checks the `Remember me` box on the login page, their session will continue even after the 120 minutes have expired. This means that the user will be kept authenticated indefinitely (or until they manually logout).
 
+## Security - Assignment 2
+* App requires use of stronger passwords.
+* App handles forgotten passwords with Mailhog.
+* App encourages the use of passwords managers.
+* Configurable throttling of the login page.
+* Passwords are hashed with `bcrypt` to protect them again rainbow table attacks.
 
 ## License
 
