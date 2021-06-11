@@ -35,7 +35,6 @@ class StrongPassword implements Rule
      */
     public function message()
     {
-        // return 'The validation error message.';
         return 'The :attribute must be 12–30 characters, and include a number, a symbol, a lower and a upper case letter';
     }
 }

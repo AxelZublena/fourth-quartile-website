@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\RelativeController;
+use App\Models\Relative;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +20,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard', ['relatives' => Relative::all()]);
 })->middleware(['auth'])->name('dashboard');
+
+Route::resource('/relatives', RelativeController::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';
